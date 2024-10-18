@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html[theme='dark']:root {
+    --mainBg: rgb(28, 28, 28);
+    --mainColor: rgb(235, 235, 235);
+    --secondColor: rgb(139, 139, 139);
+    --mainOppositeColor: black;
+    --secondOppositeColor: white;
+    --mainBoxBg: rgb(50, 50, 50);
+    --mainBorderColor: rgb(41, 41, 41);
+    --secondBorderColor: rgb(56, 56, 56);
+    --mainContentBoxBg: rgb(12, 12, 12);
+    --mainPopupOuterBg: rgba(0, 0, 0, 0.75);
+    --mainBoxShadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    --mainBoxShadowHover: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    --navExpandBoxBg: rgb(28, 28, 30);
+    --toggleBtnOffBg: rgb(57, 57, 61);
+    --toggleBtnOnBg: rgb(103, 206, 103);
+}
+
+:root {
+    --mainBg: rgb(242, 246, 249);
+    --mainColor: rgb(22, 22, 22);
+    --secondColor: rgb(139, 139, 139);
+    --mainOppositeColor: white;
+    --secondOppositeColor: black;
+    --mainBoxBg: white;
+    --mainGreenColor: #0078D4;
+    --mainGreenHoverColor: #0083e8;
+    --secondMainColor: rgb(244, 188, 65);
+    --mainBorderColor: rgb(236, 236, 236);
+    --secondBorderColor: rgb(221, 221, 221);
+    --mainContentBoxBg: white;
+    --mainPopupOuterBg: #0000004f;
+    --mainBoxShadow: 3px 3px 10px rgba(67, 67, 67, 0.200);
+    --mainBoxShadowHover: 3px 3px 15px rgba(67, 67, 67, 0.300);
+    --navExpandBoxBg: white;
+    --toggleBtnCircleBg: rgb(255, 255, 255);
+    --toggleBtnOffBg: rgb(233, 233, 235);
+    --toggleBtnOnBg: rgb(102, 196, 102);
+}
+
+html[theme='custom']:root {
+    --background: rgb(242, 242, 246);
+    --popupBg: rgb(240, 240, 240);
+    --boxBg: rgb(255, 255, 255);
+    --mainColor: rgb(0, 0, 0);
+    --secondaryTextColor: rgb(138, 138, 142);
+    --borderColor: rgb(217, 217, 219);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.welcoming-msg {
+    margin-bottom: 10px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--mainColor);
+    background: var(--mainBg);
+    min-height: 100vh;
+    transition: .2s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+}
+
+input:not([type='checkbox']) {
+    all: unset;
+}
+
+button {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+.container {
+    width: 80%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+/* ---------------- default classes ---------------- */
+
+.u_select_none {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.no-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--secondColor);
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-left {
+    text-align: left;
+}
+
+
+/* ---------------- padding ---------------- */
+
+.p15 {
+    padding: 15px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+
+/* ---------------- margin ---------------- */
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+
+/* ---------------- display ---------------- */
+
+.d-flex {
+    display: flex;
+}
+
+.flex-dir-col {
+    flex-direction: column !important;
+}
+
+.align-c {
+    align-items: center !important;
+}
+
+.justify-c {
+    justify-content: center !important;
+}
+
+.justify-spb {
+    justify-content: space-between !important;
+}
+
+
+/* ---------------- size ---------------- */
+
+.w-100 {
+    width: 100%;
+}
+
+.w-max-c {
+    width: max-content;
+}
+
+
+/* ---------------- border ---------------- */
+
+.bt-1px {
+    border-top: 1px solid var(--mainBorderColor);
+}
+
+.bb-1px {
+    border-bottom: 1px solid var(--mainBorderColor);
+}
+
+
+/* ---------------- toggle animation button style ---------------- */
+
+.anim-btn-outer {
+    width: 40px;
+    height: 24px;
+    border-radius: 50px;
+    background: var(--toggleBtnOffBg);
+    position: relative;
+    transition: .3s cubic-bezier(0.24, 0.96, 0.48, 0.94);
+}
+
+.anim-btn-outer span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: var(--toggleBtnCircleBg);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    cursor: pointer;
+    transition: inherit;
+}
+
+.anim-btn-outer.active {
+    background: var(--toggleBtnOnBg);
+}
+
+.anim-btn-outer.active span {
+    left: 18px;
+}
+
+
+/* ---------------- header ---------------- */
+
+header {
+    height: 60px;
+    background: var(--mainBg);
+    border-bottom: 1px solid var(--mainBorderColor);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    width: 40px;
+    height: 40px;
+}
+
+header .container .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--mainColor);
+    width: max-content;
+    font-weight: 600;
+    letter-spacing: .1px;
+    width: 100%;
+}
+
+nav.active {
+    transform: translate(0);
+}
+
+nav a {
+    min-width: max-content;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+nav .theme-btn {
+    cursor: pointer;
+}
+
+nav .theme-btn svg {
+    pointer-events: none;
+    transition: .2s ease-in-out;
+}
+
+nav .theme-btn.active svg {
+    transform: rotate(-150deg);
+}
+
+.nav-container {
+    border-radius: 50px;
+    width: max-content;
+}
+
+.nav-container .theme-and-settings {
+    position: relative;
+    width: 80px;
+}
+
+.expandble-menu-container {
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: calc(-50% / 2);
+    right: 0;
+    overflow: hidden;
+    background: var(--navExpandBoxBg);
+    box-shadow: var(--mainBoxShadow);
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.expandble-menu-container.active {
+    background: var(--navExpandBoxBg) !important;
+}
+
+.expandble-menu-container .settings-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    z-index: 1;
+}
+
+.expandble-menu-container .exp-box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    color: var(--mainColor);
+}
+
+.expandble-menu-container .exp-box-content .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100px;
+}
+
+.expandble-menu-container .exp-box-content a.flex {
+    background: var(--toggleBtnOffBg);
+    fill: var(--mainColor);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.expandble-menu-container .exp-box-content .flex .flex-title {
+    font-style: 15px;
+    font-weight: 500;
+}
+
+.expandble-menu-container .settings-btn svg {
+    transition: .2s ease-in-out;
+}
+
+.expandble-menu-container .settings-btn svg path {
+    fill: var(--mainColor);
+}
+
+.expandble-menu-container.active .settings-btn svg {
+    transform: rotate(25deg);
+}
+
+
+/* ---------------- responsive ---------------- */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel='shortcut icon' type='image/x-icon' href='../assets/logo.ico' />
+    <meta name="theme-color" content="rgb(242, 242, 246)" id="theme-color">
+    <meta name="background-color" content="rgb(242, 242, 246)" id="background-color">
+    <title>Coinly - Monitor your expenses</title>
+    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/theme-icon-anim.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <a href="../" class="logo-container">
+                    <img src="../assets/logo.svg" alt="logo">
+                </a>
+                <div class="theme-and-settings">
+                    <div class="nav-theme-ico">
+                        <button class="theme-toggle" id="theme-toggle">
+                            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                                <mask class="moon" id="moon-mask">
+                                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                                    <circle cx="24" cy="10" r="6" fill="black" />
+                                </mask>
+                                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                                <g class="sun-beams" stroke="currentColor">
+                                    <line x1="12" y1="1" x2="12" y2="3" />
+                                    <line x1="12" y1="21" x2="12" y2="23" />
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                    <line x1="1" y1="12" x2="3" y2="12" />
+                                    <line x1="21" y1="12" x2="23" y2="12" />
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="expandble-menu-container">
+                        <span class="settings-btn">
+                            <svg fill="none" height="32" viewBox="0 0 16 16" width="32"><path d="m2.26726 6.15309c.26172-.80594.69285-1.54574 1.26172-2.1727.09619-.10602.24711-.14381.38223-.0957l1.35948.484c.36857.13115.77413-.06004.90584-.42703.01295-.03609.02293-.07316.02982-.1108l.259-1.41553c.02575-.14074.13431-.25207.27484-.28186.41118-.08714.83276-.13146 1.25987-.13146.42685 0 .84818.04427 1.25912.1313.14049.02976.24904.14102.27485.28171l.25973 1.41578c.07022.38339.43924.63751.82434.5676.0379-.00688.0751-.01681.1113-.02969l1.3595-.48402c.1351-.04811.286-.01032.3822.0957.5689.62696 1 1.36676 1.2618 2.1727.0441.13596.0015.28502-.1079.3775l-1.1019.93152c-.2983.25225-.3348.69756-.0815.99463.0249.02921.0522.05635.0815.08114l1.1019.93153c.1094.09248.152.24154.1079.37751-.2618.80598-.6929 1.54578-1.2618 2.17268-.0962.106-.2471.1438-.3822.0957l-1.3595-.484c-.3685-.1311-.7741.0601-.90581.427-.01295.0361-.02293.0732-.02985.111l-.25971 1.4157c-.02581.1407-.13436.2519-.27485.2817-.41094.087-.83227.1313-1.25912.1313-.42711 0-.84869-.0443-1.25987-.1315-.14053-.0298-.24909-.1411-.27484-.2818l-.25899-1.4155c-.07022-.3834-.43928-.6375-.82433-.5676-.03787.0069-.0751.0168-.11128.0297l-1.35954.484c-.13512.0481-.28604.0103-.38223-.0957-.56887-.6269-1-1.3667-1.26172-2.17268-.04415-.13597-.00158-.28503.10783-.37751l1.1019-.93152c.29835-.25225.33484-.69756.08151-.99463-.02491-.02921-.05217-.05635-.0815-.08114l-1.10191-.93153c-.10941-.09248-.15198-.24154-.10783-.3775zm3.98268 1.84685c0 .9665.7835 1.75 1.75 1.75s1.75-.7835 1.75-1.75-.7835-1.75-1.75-1.75-1.75.7835-1.75 1.75z" fill="#212121"/></svg>
+                        </span>
+                        <div class="exp-box-content">
+                            <a href="../user.html" class="flex">
+                                <span>Account</span>
+                                <span>
+                                    <svg width="18" height="18" viewBox="0 0 32 32"><path d="m2 30c0-6 9-9 9-9s1-2 0-3c-2-2-2-3-2-9s4-7 7-7 7 1 7 7 0 7-2 9c-1 1 0 3 0 3s9 3 9 9z"/></svg>
+                                </span>
+                            </a>
+                            <div class="flex">
+                                <span class="flex-title">Test:</span>
+                                <div class="anim-btn-outer">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <span class="flex-title">Theme:</span>
+                                <div class="anim-btn-outer theme-btn">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="outer-container first">
+            <div class="container">
+                <h3 class="welcoming-msg"></h3>
+                <div class="top-add-boxes">
+                    <div class="add-expense-item outer-wrapper top-row-box p15">
+                        <div class="flex">
+                            <div>
+                                <h5>Create expense sheet</h5>
+                                <p><small>create your expense sheet, you can add expenses and budget to the sheet</small></p>
+                            </div>
+                            <span class="add-ico">
+                                <svg width="30" fill="none" viewBox="0 0 16 16">
+                                    <path fill="none" d="M14.5 7.5a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
+                                    <path fill="#0078D4" fill-rule="evenodd" d="M1 7.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0ZM7.5 0a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM8 4.5a.5.5 0 0 0-1 0V7H4.5a.5.5 0 0 0 0 1H7v2.5a.5.5 0 0 0 1 0V8h2.5a.5.5 0 0 0 0-1H8V4.5Z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-expense-category outer-wrapper top-row-box p15">
+                        <div class="flex">
+                            <div>
+                                <h5>Create new category</h5>
+                                <p><small>you can create new custom categories however you like</small></p>
+                            </div>
+                            <span class="add-ico">
+                                <svg width="30" fill="none" viewBox="0 0 16 16">
+                                    <path fill="none" d="M14.5 7.5a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
+                                    <path fill="#0078D4" fill-rule="evenodd" d="M1 7.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0ZM7.5 0a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM8 4.5a.5.5 0 0 0-1 0V7H4.5a.5.5 0 0 0 0 1H7v2.5a.5.5 0 0 0 1 0V8h2.5a.5.5 0 0 0 0-1H8V4.5Z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-to-sheet outer-wrapper top-row-box p15">
+                        <div class="flex">
+                            <div>
+                                <h5>Add to your expense sheet</h5>
+                                <p><small>you can just click and add your expenses to your sheets</small></p>
+                            </div>
+                            <span class="add-ico">
+                                <svg width="30" fill="none" viewBox="0 0 16 16">
+                                    <path fill="none" d="M14.5 7.5a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
+                                    <path fill="#0078D4" fill-rule="evenodd" d="M1 7.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0ZM7.5 0a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM8 4.5a.5.5 0 0 0-1 0V7H4.5a.5.5 0 0 0 0 1H7v2.5a.5.5 0 0 0 1 0V8h2.5a.5.5 0 0 0 0-1H8V4.5Z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sheets-container no-sheet outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="box-title">Sheets</h2>
+                    </div>
+                    <div class="box-inner-container">
+                        <span>There's no sheets, click on plus icon to create new sheets.</span>
+                    </div>
+                </div>
+                <div class="highlight-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Highlights</h2>
+                        <p class="sub-title t-center">This shows your highlights of your recent expenses.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <canvas id="myChart" style="width:100%;"></canvas>
+                    </div>
+                </div>
+                <div class="monthly-exp-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Weekly expenses</h2>
+                        <p class="sub-title t-center">This shows your weekly expenses with details.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vel aut cumque maxime nostrum numquam excepturi id hic doloremque quae, pariatur tenetur ipsum exercitationem qui ut tempore doloribus. Obcaecati explicabo deserunt
+                            recusandae consequuntur voluptate similique provident deleniti, delectus vitae magnam cupiditate sequi fuga rem, expedita mollitia voluptates eos quibusdam. Et.</p>
+                    </div>
+                </div>
+                <div class="monthly-exp-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Monthly expenses</h2>
+                        <p class="sub-title t-center">This shows your montly expenses with details.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vel aut cumque maxime nostrum numquam excepturi id hic doloremque quae, pariatur tenetur ipsum exercitationem qui ut tempore doloribus. Obcaecati explicabo deserunt
+                            recusandae consequuntur voluptate similique provident deleniti, delectus vitae magnam cupiditate sequi fuga rem, expedita mollitia voluptates eos quibusdam. Et.</p>
+                    </div>
+                </div>
+                <div class="monthly-exp-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Monthly expenses</h2>
+                        <p class="sub-title t-center">This shows your montly expenses with details.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vel aut cumque maxime nostrum numquam excepturi id hic doloremque quae, pariatur tenetur ipsum exercitationem qui ut tempore doloribus. Obcaecati explicabo deserunt
+                            recusandae consequuntur voluptate similique provident deleniti, delectus vitae magnam cupiditate sequi fuga rem, expedita mollitia voluptates eos quibusdam. Et.</p>
+                    </div>
+                </div>
+                <div class="monthly-exp-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Monthly expenses</h2>
+                        <p class="sub-title t-center">This shows your montly expenses with details.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vel aut cumque maxime nostrum numquam excepturi id hic doloremque quae, pariatur tenetur ipsum exercitationem qui ut tempore doloribus. Obcaecati explicabo deserunt
+                            recusandae consequuntur voluptate similique provident deleniti, delectus vitae magnam cupiditate sequi fuga rem, expedita mollitia voluptates eos quibusdam. Et.</p>
+                    </div>
+                </div>
+                <div class="monthly-exp-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Monthly expenses</h2>
+                        <p class="sub-title t-center">This shows your montly expenses with details.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vel aut cumque maxime nostrum numquam excepturi id hic doloremque quae, pariatur tenetur ipsum exercitationem qui ut tempore doloribus. Obcaecati explicabo deserunt
+                            recusandae consequuntur voluptate similique provident deleniti, delectus vitae magnam cupiditate sequi fuga rem, expedita mollitia voluptates eos quibusdam. Et.</p>
+                    </div>
+                </div>
+                <div class="monthly-exp-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Monthly expenses</h2>
+                        <p class="sub-title t-center">This shows your montly expenses with details.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vel aut cumque maxime nostrum numquam excepturi id hic doloremque quae, pariatur tenetur ipsum exercitationem qui ut tempore doloribus. Obcaecati explicabo deserunt
+                            recusandae consequuntur voluptate similique provident deleniti, delectus vitae magnam cupiditate sequi fuga rem, expedita mollitia voluptates eos quibusdam. Et.</p>
+                    </div>
+                </div>
+                <div class="monthly-exp-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Monthly expenses</h2>
+                        <p class="sub-title t-center">This shows your montly expenses with details.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vel aut cumque maxime nostrum numquam excepturi id hic doloremque quae, pariatur tenetur ipsum exercitationem qui ut tempore doloribus. Obcaecati explicabo deserunt
+                            recusandae consequuntur voluptate similique provident deleniti, delectus vitae magnam cupiditate sequi fuga rem, expedita mollitia voluptates eos quibusdam. Et.</p>
+                    </div>
+                </div>
+                <div class="monthly-exp-wrapper outer-wrapper">
+                    <div class="box-heading">
+                        <h2 class="t-center box-title">Monthly expenses</h2>
+                        <p class="sub-title t-center">This shows your montly expenses with details.</p>
+                    </div>
+                    <div class="box-inner-container">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vel aut cumque maxime nostrum numquam excepturi id hic doloremque quae, pariatur tenetur ipsum exercitationem qui ut tempore doloribus. Obcaecati explicabo deserunt
+                            recusandae consequuntur voluptate similique provident deleniti, delectus vitae magnam cupiditate sequi fuga rem, expedita mollitia voluptates eos quibusdam. Et.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="outer-container second">
+            <div class="container">
+                <button class="backBtn">Back</button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quas neque nam tenetur veritatis, labore obcaecati aspernatur, suscipit, alias recusandae dicta non? Neque nesciunt voluptatem et culpa, sit eveniet eligendi ducimus eius accusamus iusto corrupti labore expedita veniam, dolores, odio mollitia ipsum iste dolorem! Quidem eligendi eaque vero asperiores omnis illum mollitia, esse, assumenda magni nisi quaerat perspiciatis! Quidem libero ullam odio assumenda asperiores fugiat recusandae pariatur nesciunt. Vitae non voluptas consequuntur alias deserunt maiores nulla, ipsum quasi reiciendis nihil earum necessitatibus aperiam explicabo reprehenderit molestias saepe officiis ab ratione corrupti, doloremque maxime. Maxime nobis optio omnis deserunt dolorem sequi sunt assumenda alias corrupti. Exercitationem blanditiis est quis laudantium consectetur, porro dolores sed reprehenderit maxime, tenetur obcaecati eaque perferendis corporis reiciendis cum laborum numquam architecto animi. Asperiores laboriosam molestias, error nisi, omnis, fuga perspiciatis vel veniam enim esse minima distinctio soluta voluptatibus accusamus ipsum laudantium dicta labore quae eius. Sequi esse impedit minus facere aut eveniet quia, tenetur illum praesentium nulla laborum natus, alias reiciendis! Quisquam nulla autem molestias accusamus cupiditate, debitis voluptatum facere iste vero quasi iure, ipsa tenetur quae fuga ad atque sunt praesentium sed. Blanditiis alias quae ratione sunt, quas doloremque molestiae inventore, at ea impedit temporibus?</p>
+            </div>
+        </div> -->
+    </main>
+    <div class="popup-outer u_select_none">
+        <div class="popup-inner">
+            <span class="popup-close">
+                <svg width="13" viewBox="0 0 32 32">
+                    <g>
+                        <path d="M .8351675 31.163434 C 1.2154636 31.53736 1.6602205 31.78557 2.1694382 31.908066 C 2.6786558 32.03056 3.183042 32.03056 3.6825964 31.908066 C 4.182151 31.78557 4.609192 31.54703 4.9637196 31.192445 L 16.005403 20.148683 L 27.0278 31.18277 C 27.39521 31.550255 27.828694 31.79363 28.328248 31.912902 C 28.827803 32.032172 29.328968 32.028948 29.831743 31.90323 C 30.33452 31.777513 30.772834 31.52769 31.146688 31.15376 C 31.52054 30.779834 31.77032 30.341436 31.89602 29.838566 C 32.021693 29.335697 32.024914 28.83444 31.905683 28.334794 C 31.786424 27.83515 31.54631 27.401586 31.18534 27.034105 L 20.162984 15.990324 L 31.18534 4.9659046 C 31.54631 4.598424 31.788035 4.1648596 31.910514 3.6652117 C 32.032967 3.1655637 32.029746 2.6659157 31.90085 2.1662677 C 31.77193 1.6666197 31.52054 1.2298337 31.146688 .8559098 C 30.766365 .47554247 30.326427 .22249681 29.826872 .0967728 C 29.327344 -.028951213 28.827803 -.032172874 28.328248 .08710782 C 27.828694 .2063885 27.39521 .4497692 27.0278 .8172498 L 16.005403 11.841669 L 4.9637196 .8075452 C 4.609192 .45297763 4.1805404 .2160535 3.677765 .0967728 C 3.1749893 -.022481483 2.6689927 -.022481483 2.159775 .0967728 C 1.6505573 .2160535 1.2090215 .4658775 .8351675 .8462448 C .4677556 1.2201687 .22442049 1.6601764 .10516212 2.1662677 C -.014069853 2.672359 -.014069853 3.1768395 .10516212 3.679709 C .22442049 4.182579 .45807924 4.608089 .8061384 4.9562396 L 11.847861 15.990324 L .8061384 27.053447 C .45807924 27.401587 .22119943 27.82548 .09549894 28.325125 C -.030201548 28.82477 -.031812077 29.32925 .09066735 29.838566 C .21314678 30.347882 .4613135 30.789505 .8351675 31.163434 Z" fill="black"/>
+                    </g>
+                </svg>
+            </span>
+            <div class="popup-add">
+                <span>Add</span>
+            </div>
+            <div class="content-wrapper"></div>
+        </div>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../worker.js')
+                    .then(registration => {
+                        // registration successfull
+                        // console.log('Service Worker registered with scope:', registration.scope);
+                    }).catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+    <script src="../js/global.js"></script>
+    <script src="../js/animations/custom.anim.js"></script>
+    <script src="../js/script.js"></script>
+    <!-- <script type="text/javascript" src="../js/lib/chart.umd.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+        let chartInstance;
+        const renderChart = () => {
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const clr = isDarkTheme ? 'white' : 'black';
+
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            chartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: 'Dataset 1',
+                        data: [45, 59, 50, 61, 16, 75, 40],
+                        borderColor: 'yellow',
+                        backgroundColor: 'rgba(75, 192, 192, 0)',
+                        tension: 0.4
+                    }, {
+                        label: 'Dataset 2',
+                        data: [69, 48, 40, 39, 46, 27, 4],
+                        borderColor: 'red',
+                        backgroundColor: 'rgba(153, 102, 255, 0)',
+                        tension: 0.4
+                    }, {
+                        label: 'Dataset 3',
+                        data: [15, 8, 30, 19, 56, 41, 70],
+                        borderColor: 'white',
+                        backgroundColor: 'rgba(153, 102, 255, 0)',
+                        tension: 0.4
+                    }, {
+                        label: 'Dataset 4',
+                        data: [28, 48, 30, 12, 6, 15, 30],
+                        borderColor: 'black',
+                        backgroundColor: 'rgba(153, 102, 255, 0)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: {
+                                display: false,
+                                borderColor: 'rgba(228, 228, 228, 1)',
+                                borderWidth: 0
+                            },
+                            border: {
+                                display: false
+                            },
+                            ticks: {
+                                display: false //this will remove only the label
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: (context) => {
+                                    const index = context.tick && context.tick.index;
+                                    let indx = index ? index : context.index;
+                                    // Remove the grid line at the very left (first one)
+                                    return indx === 0 ? 'rgba(228, 228, 228, 1)' : 'rgba(228, 228, 228, .2)';
+                                },
+                                zeroLineColor: 'transparent',
+                                borderColor: 'rgba(228, 228, 228, 1)'
+                            },
+                            border: {
+                                display: true
+                            },
+                            ticks: {
+                                color: 'white',
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+        renderChart()
+    </script>
+</body>
+
+</html>

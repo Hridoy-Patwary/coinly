@@ -1,0 +1,16 @@
+{
+    "name": "Coinly - Monitor your expenses",
+    "short_name": "Coinly",
+    "start_url": "index.html",
+    "theme_color": "rgb(242, 242, 246)",
+    "background_color": "#000000",
+    "display": "standalone",
+    "description": "Monitor your weekly and monthly expenses using Coinly",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "./assets/logo.png",
+            "sizes": "500x500"
+        }
+    ]
+}
