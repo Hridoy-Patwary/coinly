@@ -14,12 +14,26 @@ const settingsBtn = document.querySelector('header .settings-btn');
 let isDarkTheme = savedTheme && savedTheme == 'false' ? false : true;
 let themeMode = isDarkTheme == true ? 'dark' : 'white';
 let userPage = window.location.pathname.slice(1) === 'user.html' ? true : false;
+let usingAsPWA = window.matchMedia('(display-mode: standalone)').matches ? true : false;
 
 const log = (text) => {
     console.log(text);
 }
 
-
+// check if it's using as an PWA
+if(usingAsPWA && window.location.pathname == '/'){
+    window.location.href = 'user.html#signin';
+}
+localStorage.setItem('pwa', usingAsPWA ? true : false);
+const checkPWAandDisableHome = () => {
+    if(usingAsPWA){
+        const logoContainers = document.querySelectorAll('a.logo-container, .outer-logo-container');
+        logoContainers.forEach((container) => container.addEventListener('click', (e) => {
+            e.preventDefault();
+        }))
+    }
+}
+checkPWAandDisableHome();
 
 async function cacheImages(imageUrls) {
     // Ensure the browser supports the Cache API
