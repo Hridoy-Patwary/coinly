@@ -197,32 +197,34 @@ const handleSignUpAndSignInFormReq = (signUpOrIn, e) => {
 
 
     if (allDone) {
-        let generatedText = '', dataForSending = {};
-        Object.keys(dataObj).forEach((obj) => {
-            if (obj == 'cf-password') return;
-            dataForSending[obj] = dataObj[obj];
-            generatedText += obj + '=';
-            generatedText += dataObj[obj];
-            generatedText += '&';
-        })
-        generatedText.slice(0, -1)
+        // let generatedText = '', dataForSending = {};
+        // Object.keys(dataObj).forEach((obj) => {
+        //     if (obj == 'cf-password') return;
+        //     dataForSending[obj] = dataObj[obj];
+        //     generatedText += obj + '=';
+        //     generatedText += dataObj[obj];
+        //     generatedText += '&';
+        // })
+        // generatedText.slice(0, -1)
 
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', `${service.networkCallUrl}/auth/${signUpOrIn}`, true);
-        xhr.onload = function () {
-            if (this.status === 200) {
-                const json = JSON.parse(this.responseText);
-                if (json.status === 200) {
-                    service.saveToLocal('user', json.data, true);
-                    window.location = './admin';
-                } else {
-                    alert(json.status);
-                }
-            }
-        }
+        // const xhr = new XMLHttpRequest();
+        // xhr.open('POST', `${service.networkCallUrl}/auth/${signUpOrIn}`, true);
+        // xhr.onload = function () {
+        //     if (this.status === 200) {
+        //         const json = JSON.parse(this.responseText);
+        //         if (json.status === 200) {
+        //             service.saveToLocal('user', json.data, true);
+        //             window.location = './admin';
+        //         } else {
+        //             alert(json.status);
+        //         }
+        //     }
+        // }
 
-        xhr.setRequestHeader("Content-type", "application/json");
-        xhr.send(JSON.stringify(dataForSending));
+        // xhr.setRequestHeader("Content-type", "application/json");
+        // xhr.send(JSON.stringify(dataForSending));
+
+        window.location = './admin';
     }
 }
 
@@ -231,6 +233,7 @@ const handleUriPath = (path) => {
         toSignUp()
     } else if(path != '') toSignIn();
 }
+
 
 // =================== default listeners =================== //
 setThemeColors('yellow');
